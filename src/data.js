@@ -1,7 +1,6 @@
-import HeroImage from "/assets/hero-img.webp";
-
 const Image = {
-  HeroImage,
+  // Tidak perlu pakai import di atas, langsung tulis jalurnya sebagai string
+  HeroImage: "/assets/renald-profile.jpeg", 
 };
 
 export default Image;

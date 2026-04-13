@@ -68,60 +68,44 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.webp";
-import Proyek2 from "/assets/proyek/proyek2.webp";
-import Proyek3 from "/assets/proyek/proyek3.webp";
-import Proyek4 from "/assets/proyek/proyek4.webp";
-import Proyek5 from "/assets/proyek/proyek5.webp";
-import Proyek6 from "/assets/proyek/proyek6.webp";
+import Proyek1 from "/assets/proyek/proyek1.png";
+import Proyek2 from "/assets/proyek/proyek2.png";
+import Proyek3 from "/assets/proyek/proyek3.png";
+import Proyek4 from "/assets/proyek/proyek4.png";
+// Jangan lupa import gambarnya di bagian atas file data.js ya!
+// Contoh: import ProyekSibeta from "../assets/sibeta.png"
 
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1,
-    nama: "Website Sekolah",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    gambar: Proyek1, // <--- Ganti dengan variabel import gambar kamu
+    nama: "Website Bebas Tanggungan (SiBeTa)",
+    desk: "Sistem informasi untuk mengelola persyaratan akademik mahasiswa akhir di POLINEMA agar bebas tanggungan wisuda.",
+    tools: ["HTML", "Javascript", "Bootstrap", "MySQL", "CSS", "PHP"],
     dad: "200",
   },
   {
     id: 2,
-    gambar: Proyek2,
-    nama: "Company Profile",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS", "Swiper", "Lightbox Gallery"],
+    gambar: Proyek2, 
+    nama: "Website Tracer Study",
+    desk: "Platform untuk melacak jejak karier alumni dan mengumpulkan feedback pengguna lulusan guna evaluasi kurikulum.",
+    tools: ["Laravel", "Bootstrap", "PHP", "MySQL"],
     dad: "300",
   },
   {
     id: 3,
-    gambar: Proyek3,
-    nama: "Web Pernikahan 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "TailwindCSS", "AOS"],
+    gambar: Proyek3, 
+    nama: "HRIS Mobile App",
+    desk: "Aplikasi manajemen SDM untuk absensi dan penggajian karyawan secara real-time melalui perangkat mobile.",
+    tools: ["Flutter", "Dart", "Laravel", "PHP"],
     dad: "400",
   },
   {
     id: 4,
-    gambar: Proyek4,
-    nama: "Website Course",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["Vite", "ReactJS", "Bootstrap", "AOS"],
+    gambar: Proyek4, 
+    nama: "Personal Portfolio",
+    desk: "Website portofolio interaktif untuk memamerkan proyek pengembangan perangkat lunak dan desain UI/UX.",
+    tools: ["Vite", "ReactJS", "NodeJS", "TailwindCSS"],
     dad: "500",
-  },
-  {
-    id: 5,
-    gambar: Proyek5,
-    nama: "Web Portfolio",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "Bootsrap"],
-    dad: "600",
-  },
-  {
-    id: 6,
-    gambar: Proyek6,
-    nama: "Company Profile 2.0",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["NextJS", "TailwindCSS", "Framermotion"],
-    dad: "700",
   },
 ];

@@ -7,6 +7,9 @@ import Footer from './component/Footer.jsx'
 import 'remixicon/fonts/remixicon.css'
 import Preloader from './component/Preloader.jsx'
 import 'animate.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

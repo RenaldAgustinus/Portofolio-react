@@ -1,6 +1,17 @@
 import DataImage from "./data"
 import {listTools, listProyek} from "./data"
+import { useEffect } from "react"; // Tambahkan ini
+import AOS from "aos"; // Tambahkan ini
+import "aos/dist/aos.css"; // Tambahkan ini
+
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      once: false, // Biar animasi bisa muncul berkali-kali saat di-scroll up/down
+    });
+  }, []);
+  
   return (
     <>
       {/* SECTION HERO */}
@@ -16,15 +27,15 @@ function App() {
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
             <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-500">Download CV <i className="ri-download-2-fill ri-lg"></i></a> 
-            <a href="#" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-500">Lihat Proyek <i className="ri-arrow-down-fill ri-lg"></i></a>
+            <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-500">Lihat Proyek <i className="ri-arrow-down-fill ri-lg"></i></a>
           </div>
         </div>
         <img src={DataImage.HeroImage} alt="Hero Image" className="w-[500px] md:ml-auto animate__animated animate__fadeInUp animate__delay-4s" loading="lazy" />
       </div>
 
       {/* SECTION TENTANG */}
-      <div className="tentang mt-32 py-10">
-        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg">
+      <div className="tentang mt-32 py-10"id="tentang">
+        <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg " data-aos="fade-up" data-aos-duration="1000">
           <p className="text-base mb-10">
             Hi, perkenalkan saya Bagas Satria Yudho Nugraha... (isi deskripsi kamu)
           </p>
@@ -45,15 +56,16 @@ function App() {
       <div className="tools mt-32 pb-20"> {/* Hapus text-center di sini */}
         
         {/* Judul & Deskripsi tetap di tengah */}
-        <h1 className="text-4xl/snug font-bold mb-2 text-center">TOOLS</h1>
-        <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50 mx-auto text-center">
+        <h1 className="text-4xl/snug font-bold mb-2 text-center" data-aos="fade-up" data-aos-duration="1000">TOOLS</h1>
+        <p className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base/loose opacity-50 mx-auto text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           Berikut ini beberapa tools yang biasa saya pakai untuk pembuatan website ataupun Design
         </p>
 
         {/* Kotak-kotak tools */}
         <div className="tools-box mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {listTools.map((tool) => (
-            <div className="flex items-center gap-4 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id}>
+            <div className="flex items-center gap-4 p-3 border border-zinc-600 rounded-md hover:bg-zinc-800 group" key={tool.id} 
+            data-aos="fade-up" data-aos-duration="1000" data-aos-delay={tool.dad}>
               <img src={tool.gambar} alt={tool.nama} className="w-14 bg-zinc-800 p-3 rounded-lg group-hover:bg-zinc-900" />
               
               {/* Teks di sini sekarang otomatis rata kiri karena text-center di atas sudah dibuang */}
@@ -66,14 +78,14 @@ function App() {
         </div>
       </div>
      {/* SECTION PROYEK */}
-        <div className="proyek mt-32 py-10">
-            <h1 className="text-center text-4xl font-bold mb-2">Proyek</h1>
-            <p className="text-base/loose text-center opacity-50">Berikut adalah proyek yang saya buat</p>
+        <div className="proyek mt-32 py-10" id="proyek">
+            <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000">Proyek</h1>
+            <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut adalah proyek yang saya buat</p>
         </div>
 
         <div className="proyek-box mt-14 grid lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-8">
             {listProyek.map((proyek) => (
-                <div key={proyek.id} className="p-6 bg-zinc-800 rounded-lg flex flex-col h-full shadow-lg">
+                <div key={proyek.id} className="p-6 bg-zinc-800 rounded-lg flex flex-col h-full shadow-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={proyek.dad}>
                     {/* Gambar: Dibuat w-full supaya tetap besar mengikuti lebar card */}
                     <div className="w-full overflow-hidden rounded-md mb-6">
                         <img 
@@ -111,11 +123,18 @@ function App() {
         </div>
 
         {/* SECTION KONTAK */}
-        <div className="kontak mt-32 sm:p-10 p-0"> {/* <-- Sudah dibenerin kutipnya */}
-            <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
-            <p className="text-base/loose text-center mb-10 opacity-50">Mari Terhubung dengan saya</p>
-            
-            <form action="https://formsubmit.co/renaldagustinus41@gmail.com" method="POST" className="bg-zinc-800 sm:w-fit w-full p-10 w-full max-w-lg mx-auto rounded-md" autoComplete="off">
+        <div id="kontak" className="kontak mt-32 py-10 w-full">
+        <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up">Kontak</h1>
+        <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-delay="300">Mari Terhubung dengan saya</p>
+            <form 
+              action="https://formsubmit.co/renaldagustinus41@gmail.com" 
+              method="POST" 
+              className="bg-zinc-800 p-10 w-full max-w-2xl mx-auto rounded-md" 
+              autoComplete="off"
+              data-aos="fade-up" 
+              data-aos-duration="1000" 
+              data-aos-delay="500"
+            >
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-2">
                         <label className="font-semibold text-white">Nama Lengkap</label>

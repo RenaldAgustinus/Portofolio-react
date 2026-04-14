@@ -30,21 +30,21 @@ const Navbar = () => {
                 bg-white/30 backdrop-blur-md p-4 
                 rounded-br-2xl rounded-bl-2xl 
                 md:bg-transparent transition-all md:transition-none
-                z-50
+                z-40
                 ${active ? "top-0 opacity-100" : "-top-20 opacity-0"}
               `}>
         
             <li>
-                <a href="#" className="sm:text-lg text-base font-medium">Beranda</a>
+                <a href="#beranda" className="sm:text-lg text-base font-medium">Beranda</a>
             </li>
             <li>
-                <a href="#" className="sm:text-lg text-base font-medium">Tentang</a>
+                <a href="#tentang" className="sm:text-lg text-base font-medium">Tentang</a>
             </li>
             <li>
-                <a href="#" className="sm:text-lg text-base font-medium">Proyek</a>
+                <a href="#proyek" className="sm:text-lg text-base font-medium">Proyek</a>
             </li>
             <li>
-                <a href="#" className="sm:text-lg text-base font-medium">Kontak</a>
+                <a href="#kontak" className="sm:text-lg text-base font-medium">Kontak</a>
             </li>
             </ul>
         </div>

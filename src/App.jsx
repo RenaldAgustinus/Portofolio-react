@@ -111,27 +111,33 @@ function App() {
         </div>
 
         {/* SECTION KONTAK */}
-        <div className=""kontak mt-32 p-10>
+        <div className="kontak mt-32 sm:p-10 p-0"> {/* <-- Sudah dibenerin kutipnya */}
             <h1 className="text-4xl mb-2 font-bold text-center">Kontak</h1>
             <p className="text-base/loose text-center mb-10 opacity-50">Mari Terhubung dengan saya</p>
-            <form action="https://formsubmit.co/renaldagustinus41@gmail.com" method="POST" className="bg-zinc-800 p-10 w-fit mx-auto rounded-md" autoComplete="off">
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="font-semibold">Nama Lengkap</label>
-                  <input type="text" name="nama" placeholder="Masukkan Nama" className="border border-zinc-500 p-2 rounded-md" required />
+            
+            <form action="https://formsubmit.co/renaldagustinus41@gmail.com" method="POST" className="bg-zinc-800 sm:w-fit w-full p-10 w-full max-w-lg mx-auto rounded-md" autoComplete="off">
+                <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-2">
+                        <label className="font-semibold text-white">Nama Lengkap</label>
+                        <input type="text" name="nama" placeholder="Masukkan Nama" className="border border-zinc-500 bg-zinc-900 text-white p-2 rounded-md focus:border-violet-500 outline-none" required />
+                    </div>
+                    
+                    <div className="flex flex-col gap-2">
+                        <label className="font-semibold text-white">Email</label>
+                        <input type="email" name="email" placeholder="Masukkan Email" className="border border-zinc-500 bg-zinc-900 text-white p-2 rounded-md focus:border-violet-500 outline-none" required />
+                    </div>
+                    
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="pesan" className="font-semibold text-white">Pesan</label>
+                        <textarea name="pesan" id="pesan" rows="7" className="border border-zinc-500 bg-zinc-900 text-white p-2 rounded-md focus:border-violet-500 outline-none resize-none" required placeholder="Pesan ..."></textarea>
+                    </div>
+                    
+                    <div className="text-center">
+                        <button type="submit" className="bg-violet-700 py-3 rounded-lg w-full cursor-pointer text-center font-bold hover:bg-violet-600 transition-colors shadow-md text-white">
+                            Kirim Pesan
+                        </button>
+                    </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <label className="font-semibold">Email</label>
-                  <input type="email" name="email" placeholder="Masukkan Email" className="border border-zinc-500 p-2 rounded-md" required />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label htmlFor="pesan" className="font-semibold" >Pesan</label>
-                  <textarea name="pesan" id="pesan" cols="45" rows="7" className="border border-zinc-500 p-2 rounded-md" required placeholder="Pesan ..."></textarea>
-                </div>
-                <div className="text-center">
-                  <button  type="submit" className="bg-violet-700 py-3 rounded-lg w-full cursor-pointer text-center font-bold hover:bg-violet-600 transition-colors shadow-md">Kirim Pesan</button>
-                </div>
-              </div>
             </form>
         </div>
 

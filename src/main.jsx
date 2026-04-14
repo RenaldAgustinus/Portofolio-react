@@ -6,6 +6,7 @@ import Navbar from './component/Navbar.jsx'
 import Footer from './component/Footer.jsx' 
 import 'remixicon/fonts/remixicon.css'
 import Preloader from './component/Preloader.jsx'
+import 'animate.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

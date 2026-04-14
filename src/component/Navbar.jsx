@@ -30,6 +30,7 @@ const Navbar = () => {
                 bg-white/30 backdrop-blur-md p-4 
                 rounded-br-2xl rounded-bl-2xl 
                 md:bg-transparent transition-all md:transition-none
+                z-50
                 ${active ? "top-0 opacity-100" : "-top-20 opacity-0"}
               `}>
         

@@ -17,16 +17,19 @@ function App() {
       {/* SECTION HERO */}
       <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
         <div className="animate__animated animate__fadeInUp animate__delay-3s">
-          <div className="flex items-center gap-3 mb-3 bg-zinc-800 w-fit p-4 rounded-2xl">
-            <img src={DataImage.HeroImage} alt="Hero Image" className="w-10 rounded-md" loading="lazy" />
-            <q>KATAKATA/DESKRIPSI</q>
-          </div>
           <h1 className="text-5xl/tight font-bold mb-6">Hi, Saya Renald Agustinus</h1>
           <p className="text-base/loose mb-6 opacity-50">
-            Deskripsi Singkat 
+            "Mahasiswa Sistem Informasi Bisnis yang sedang mendalami Front-End Development dan UI/UX Design. 
+            Memiliki latar belakang sebagai Junior Storyboard Artist yang membantu saya dalam memahami alur visual sebuah aplikasi."
           </p>
           <div className="flex items-center sm:gap-4 gap-2">
-            <a href="#" className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-500">Download CV <i className="ri-download-2-fill ri-lg"></i></a> 
+            <a 
+              href="/CV_Renald_Agustinus.pdf" 
+              download="CV_Renald_Agustinus.pdf" 
+              className="bg-violet-700 p-4 rounded-2xl hover:bg-violet-500"
+            >
+              Download CV <i className="ri-download-2-fill ri-lg"></i>
+            </a>
             <a href="#proyek" className="bg-zinc-700 p-4 rounded-2xl hover:bg-zinc-500">Lihat Proyek <i className="ri-arrow-down-fill ri-lg"></i></a>
           </div>
         </div>
@@ -36,17 +39,27 @@ function App() {
       {/* SECTION TENTANG */}
       <div className="tentang mt-32 py-10"id="tentang">
         <div className="xl:w-2/3 lg:w-3/4 w-full mx-auto p-7 bg-zinc-800 rounded-lg " data-aos="fade-up" data-aos-duration="1000">
-          <p className="text-base mb-10">
-            Hi, perkenalkan saya Bagas Satria Yudho Nugraha... (isi deskripsi kamu)
+          <div className="text-base/loose md:text-lg/relaxed space-y-6 text-zinc-300">
+          <p>
+            Halo! Saya <span className="text-white font-bold">Renald Agustinus</span>, mahasiswa Sistem Informasi Bisnis di <span className="text-white font-semibold">Politeknik Negeri Malang</span>.
           </p>
+
+          <p>
+            Perjalanan saya di dunia digital dimulai dari peran sebagai <span className="italic text-zinc-100">Junior Storyboard Artist</span>. Pengalaman ini memberikan saya pondasi kuat dalam memahami komposisi dan alur visual, yang kini sangat berguna saat saya merancang antarmuka pengguna di dunia <span className="text-violet-400 font-semibold">UI/UX Design</span>.
+          </p>
+
+          <p>
+            Saat ini, saya sedang fokus mengembangkan keahlian di bidang <span className="text-violet-400 font-semibold">Front-End Development</span>. Saya sangat menikmati proses mengubah desain visual menjadi kode fungsional yang interaktif menggunakan <span className="text-white font-medium">React</span> dan <span className="text-white font-medium">Tailwind CSS</span>.
+          </p>
+        </div>
           
           <div className="flex justify-end gap-10 mt-6">
             <div className="text-right">
-              <h1 className="text-2xl font-bold">45 <span className="text-violet-500">+</span></h1>
+              <h1 className="text-2xl font-bold">4 <span className="text-violet-500">+</span></h1>
               <p className="text-sm opacity-60">Proyek Selesai</p>
             </div>
             <div className="text-right">
-              <h1 className="text-2xl font-bold">45 <span className="text-violet-500">+</span></h1>
+              <h1 className="text-2xl font-bold">2 <span className="text-violet-500">+</span></h1>
               <p className="text-sm opacity-60">Tahun Pengalaman</p>
             </div>
           </div>

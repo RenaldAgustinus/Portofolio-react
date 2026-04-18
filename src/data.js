@@ -74,14 +74,14 @@ import Proyek3 from "/assets/proyek/proyek3.png";
 import Proyek4 from "/assets/proyek/proyek4.png";
 // Jangan lupa import gambarnya di bagian atas file data.js ya!
 // Contoh: import ProyekSibeta from "../assets/sibeta.png"
-
 export const listProyek = [
   {
     id: 1,
-    gambar: Proyek1, // <--- Ganti dengan variabel import gambar kamu
+    gambar: Proyek1,
     nama: "Website Bebas Tanggungan (SiBeTa)",
     desk: "Sistem informasi untuk mengelola persyaratan akademik mahasiswa akhir di POLINEMA agar bebas tanggungan wisuda.",
     tools: ["HTML", "Javascript", "Bootstrap", "MySQL", "CSS", "PHP"],
+    link: "https://github.com/RenaldAgustinus/PBL_SistemBebasTanggungan", // <--- TAMBAHKAN INI
     dad: "200",
   },
   {
@@ -90,6 +90,7 @@ export const listProyek = [
     nama: "Website Tracer Study",
     desk: "Platform untuk melacak jejak karier alumni dan mengumpulkan feedback pengguna lulusan guna evaluasi kurikulum.",
     tools: ["Laravel", "Bootstrap", "PHP", "MySQL"],
+    link: "https://github.com/RenaldAgustinus/PBL_TracerStudy", // <--- TAMBAHKAN INI
     dad: "300",
   },
   {
@@ -98,6 +99,7 @@ export const listProyek = [
     nama: "HRIS Mobile App",
     desk: "Aplikasi manajemen SDM untuk absensi dan penggajian karyawan secara real-time melalui perangkat mobile.",
     tools: ["Flutter", "Dart", "Laravel", "PHP"],
+    link: "https://github.com/BagasSatriaYn/PBL_HRISKel3", // <--- TAMBAHKAN INI
     dad: "400",
   },
   {
@@ -106,6 +108,7 @@ export const listProyek = [
     nama: "Personal Portfolio",
     desk: "Website portofolio interaktif untuk memamerkan proyek pengembangan perangkat lunak dan desain UI/UX.",
     tools: ["Vite", "ReactJS", "NodeJS", "TailwindCSS"],
+    link: "https://github.com/RenaldAgustinus/portofolio-react", // <--- TAMBAHKAN INI
     dad: "500",
   },
 ];

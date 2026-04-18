@@ -126,7 +126,12 @@ function App() {
 
                         {/* Tombol: mt-auto akan memaksa tombol ini nempel ke dasar card */}
                         <div className="mt-auto pt-4">
-                            <a href="#" className="bg-violet-700 py-3 rounded-lg block w-full text-center font-bold hover:bg-violet-600 transition-colors shadow-md">
+                                  <a 
+                                  href={proyek.link} 
+                                  target="_blank" 
+                                  rel="noreferrer" 
+                                  className="bg-violet-700 py-3 rounded-lg block w-full text-center font-bold hover:bg-violet-600 transition-colors shadow-md"
+                                >
                                 Lihat Project
                             </a>
                         </div>
